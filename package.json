@@ -1,0 +1,22 @@
+{
+  "name": "fcc-url-short",
+  "version": "1.0.0",
+  "description": "URL Shortener microservice for FreeCodeCamp back-end cert",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "fcc",
+    "url",
+    "shortener"
+  ],
+  "author": "Matúš Námešný",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.2",
+    "marked-engine": "^0.1.0",
+    "mongodb": "^2.2.27",
+    "valid-url": "^1.0.9"
+  }
+}
