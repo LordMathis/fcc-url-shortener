@@ -5,15 +5,14 @@ var validUrl = require('valid-url');
 
 var app = express();
 var db;
-var baseUrl = process.env.BASE_URL || 'localhost:' + app.get('port');
-var mongoUrl = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/urlshrt';
 
 app.set('views', path.join(__dirname, '/views'));
 app.engine('md', require('marked-engine').renderFile);
 app.set('view engine', 'md');
 app.set('port', (process.env.PORT || 5000));
 
-var baseUrl = 'localhost:' + app.get('port');
+var baseUrl = process.env.BASE_URL || 'localhost:' + app.get('port');
+var mongoUrl = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/urlshrt';
 
 app.get('/', (req,res) => {
   res.render('index');
